@@ -1,0 +1,75 @@
+{include(file='header.html')}
+<div class="row header">
+    <h1>{$heading}</h1>
+    <h3>{$subheading}</h3>
+</div>
+<div class="row body">
+    <form action="#">
+        <div id="personal-info">
+            <ul>
+                  <li>
+                    <p class="left">
+
+                        <select name="title">
+                             <option selected="selected">Title</option>
+                            <option>Mr</option>
+                        </select>
+                    </p>
+
+                </li>
+
+                <li>
+                    <p class="left">
+
+                        <input type="text" name="first_name" placeholder="Firstname" />
+                    </p>
+
+                </li>
+                <li>
+                    <p class="left">
+
+                        <input type="text" name="last_name" placeholder="Lastname" />      
+                    </p>
+                </li>
+
+                <li>
+                    <p class="left">
+
+                        <input type="email" name="email" placeholder="Email" />
+                    </p>
+                </li>        
+                <!--
+                <li>
+                    <label for="comments">comments</label>
+                    <textarea cols="46" rows="3" name="comments"></textarea>
+                </li>
+                -->
+                <li>
+                    <input id="personal-info-next" class="btn btn-submit" type="button" value="Next" />
+                    <!--small>or press <strong>enter</strong></small-->
+                </li>
+
+            </ul>
+        </div>
+        <div id="account-info">
+            <ul>
+
+
+                <li>
+                    <p class="left">
+                        <label for="comments">Address</label>
+                        <textarea cols="46" rows="3" name="address"></textarea>
+                    </p>
+                </li>
+
+                <li>
+                    <input id="account-info-next" class="btn btn-submit" type="button" value="Next" />
+                    <input id="account-info-prev" class="btn btn-submit" type="button" value="Back" />
+                    <!--small>or press <strong>enter</strong></small-->
+                </li>
+
+            </ul>
+        </div>
+    </form>  
+</div>
+{include(file='footer.html')}
