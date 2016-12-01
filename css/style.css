@@ -63,6 +63,11 @@ h3 {
     margin: 0em 0 1em 0;
 }
 
+h2{
+    color: #1AAF20;
+    font-size: 1em;
+}
+
 .btn {
     font-size: 11px;
     display: inline-block;
@@ -70,7 +75,9 @@ h3 {
     margin: 1.5em 0 0;
     color: #fff;
     border-width: 0 0 0 0;
-    border-bottom: 5px solid;
+    border-radius: 2px;
+    border : 1px solid #1AAF20;
+    /*border-bottom: 5px solid;*/
     text-transform: uppercase;
     background-color:  #1AAF20;
     border-bottom-color:  #4F5155;
@@ -189,3 +196,4 @@ form small {
         display: none;
     }
 }
+

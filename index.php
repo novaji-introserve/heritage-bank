@@ -8,12 +8,13 @@ require_once 'helpers.php';
 
 $app = new \Slim\App;
 $dwoo = new Dwoo();
+$dwoo->setCacheTime(5);
 $app->get('/account/new', function (Request $request, Response $response) use($dwoo) {
     //$response->withJson(setJson('success', $result));
     $variables = array('heading' => 'Open an Account',
         'subheading' => 'Fill this form',
         'host' => HOST);
-    return $dwoo->get('views/new-account.html', $variables);
+    return $dwoo->get('views/account-new.html', $variables);
 });
 $app->get('/', function (Request $request, Response $response) use($dwoo) {
     //$response->withJson(setJson('success', $result));
@@ -21,5 +22,26 @@ $app->get('/', function (Request $request, Response $response) use($dwoo) {
         'subheading' => 'Personal Information',
         'host' => HOST);
     return $dwoo->get('views/new-account.html', $variables);
+});
+$app->get('/paddy/new', function (Request $request, Response $response) use($dwoo) {
+    //$response->withJson(setJson('success', $result));
+    $variables = array('heading' => 'Paddy Setup',
+        'subheading' => 'Personal Information',
+        'host' => HOST);
+    return $dwoo->get('views/paddy-new.html', $variables);
+});
+$app->get('/pib/new', function (Request $request, Response $response) use($dwoo) {
+    //$response->withJson(setJson('success', $result));
+    $variables = array('heading' => 'Personal Internet Banking',
+        'subheading' => 'Personal Information',
+        'host' => HOST);
+    return $dwoo->get('views/pib-new.html', $variables);
+});
+$app->get('/atm/complaint', function (Request $request, Response $response) use($dwoo) {
+    //$response->withJson(setJson('success', $result));
+    $variables = array('heading' => 'ATM Services',
+        'subheading' => 'Personal Information',
+        'host' => HOST);
+    return $dwoo->get('views/atm-complaint.html', $variables);
 });
 $app->run();

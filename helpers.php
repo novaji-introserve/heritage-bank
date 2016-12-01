@@ -6,5 +6,5 @@
  * and open the template in the editor.
  */
 
-#define('HOST','http://localhost:2000/heritage-forms/');
-define('HOST','https://heritage-forms.eu-gb.mybluemix.net/');
+define('HOST','http://localhost:2000/heritage-bank/');
+#define('HOST','https://heritage-forms.eu-gb.mybluemix.net/');
